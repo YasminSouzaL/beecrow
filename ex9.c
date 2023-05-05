@@ -5,13 +5,23 @@ O arquivo de entrada contém um valor de ponto flutuante N (0 ≤ N ≤ 1000000.
 Saída
 Imprima a quantidade mínima de notas e moedas necessárias para trocar o valor inicial, conforme exemplo fornecido.
 Obs: Utilize ponto (.) para separar a parte decimal.
+    n50=(valor%100)/50;
+    n20=((valor%100)%50)/20;
+    n10=(((valor%100)%50)%20)/10;
+    n5=((((valor%100)%50)%20)%10)/5;
+    n2=(((((valor%100)%50)%20)%10)%5)/2;
+    m1=((((((valor%100)%50)%20)%10)%5)%2)/1;
+    m50=(((((((valor%100)%50)%20)%10)%5)%2)%1)/0.5;
+    m25=((((((((valor%100)%50)%20)%10)%5)%2)%1)%0.5)/0.25;
+    m10=(((((((((valor%100)%50)%20)%10)%5)%2)%1)%0.5)%0.25)/0.1;
+    m5=((((((((((valor%100)%50)%20)%10)%5)%2)%1)%0.5)%0.25)%0.1)/0.05;
+    m01=(((((((((((valor%100)%50)%20)%10)%5)%2)%1)%0.5)%0.25)%0.1)%0.05)/0.01;
+
 */
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
-    float valor;
-    int n100,n50,n20,n10,n5,n2;
-    int m1,m50,m25,m10,m5,m01;
+    float valor,n100,n50,n20,n10,n5,n2,m1,m50,m25,m10,m5,m01;
     scanf("%f",&valor);
     n100=valor/100;
     n50=(valor%100)/50;
