@@ -9,15 +9,13 @@ O arquivo de entrada contém três valores inteiros.
 
 Saída
 Imprima o maior dos três valores seguido por um espaço e a mensagem "eh o maior".*/
-
 #include <stdio.h>
 #include <stdlib.h>
 int main() {
-    int a,b,c,maiorab,maiortotal;
+    int a,b,c,MaiorAB,maiortotal;
     scanf("%d %d %d",&a,&b,&c);
-    maiorab=(a+b+abs(a-b))/2;
-    maiortotal= (maiorab+c+abs(maiorab-c))/2; 
-    printf("%d eh maior",maiortotal);
+    MaiorAB=((a+b+abs(a-b))/2);
+    maiortotal=((MaiorAB+c+abs(MaiorAB-c))/2); 
+    printf("%d eh o maior",maiortotal);
     return 0;
 }
-
